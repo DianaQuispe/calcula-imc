@@ -1,6 +1,16 @@
 
-	var nombre = prompt("Ingrese tu nombre");
-	var peso = prompt("Ingrese su PESO " + nombre);
-	var altura = prompt("Ingrese su ALTURA " + nombre);	
-	var IMC =peso/(altura * altura);
-	alert(" Su indice de masa corporal(IMS) es: " + IMC.toFixed(2));
+var nombre = prompt("Ingrese su nombre");
+var peso = prompt( nombre + "ingrese su PESO en kgs: ");
+var tamanio = prompt(  nombre + "ingrese su ESTATURA en mts: ", "1.65");
+var imc;
+
+function calcular (mts, kg){
+		var indice;
+		mts =  Math.pow(mts,2);	
+		indice = kg/mts;
+		indice = indice.toFixed(2);
+		return indice;
+	}
+
+imc = calcular(tamanio, peso);
+alert(nombre + " tu indice de Masa corporal es: " + imc );
