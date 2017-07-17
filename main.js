@@ -1,12 +1,15 @@
+var peso = prompt("Ingrese su peso en kgs: ");
+var tamanio = prompt("Ingrese su estatura en mts: ", "1.65");
 
-function calculadora(peso,altura) {
-var peso = prompt("Dime tu peso: ");
-var altura = prompt("Dime tu altura: ");
- peso = parseFloat(peso);
- altura = parseFloat(altura);
- altura =  Math.pow(altura,2);
-var imc = peso/altura;
-  
-	return alert("Tu imc es: "+imc.toFixed(2));
-}
-calculadora();
+var imc;
+
+function calcular (mts, kg){
+		var indice;
+		mts =  Math.pow(mts,2);	
+		indice = kg/mts;
+		indice = indice.toFixed(2);
+		return indice;
+	}
+
+imc = calcular(tamanio, peso);
+alert("Su indice de Masa corporal es: " + imc);
