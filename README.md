@@ -1,1 +1,1 @@
-# calcula-imc
+# calculadora-imc
