@@ -1,4 +1,3 @@
-
 var peso = prompt("Ingrese su peso en kgs: ");
 var tamanio = prompt("Ingrese su estatura en mts: ", "1.65");
 
@@ -6,8 +5,8 @@ var imc;
 
 function calcular (mts, kg){
 		var indice;
-			
-		indice = kg/(mts*mts);
+		mts =  Math.pow(mts,2);	
+		indice = kg/mts;
 		indice = indice.toFixed(2);
 		return indice;
 	}
