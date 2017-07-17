@@ -1,6 +1,7 @@
-var peso = prompt("Ingrese su peso en kgs: ");
-var tamanio = prompt("Ingrese su estatura en mts: ", "1.65");
 
+var nombre = prompt("Ingrese su nombre");
+var peso = prompt( nombre + "ingrese su PESO en kgs: ");
+var tamanio = prompt(  nombre + "ingrese su ESTATURA en mts: ", "1.65");
 var imc;
 
 function calcular (mts, kg){
@@ -12,4 +13,4 @@ function calcular (mts, kg){
 	}
 
 imc = calcular(tamanio, peso);
-alert("Su indice de Masa corporal es: " + imc);
+alert(nombre + " tu indice de Masa corporal es: " + imc );
